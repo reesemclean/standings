@@ -26,17 +26,17 @@ StandingsListComponent.defaultProps = {
       includeTies: false,
       teams: [
         {
-          name: 'Ghazi & Reese',
-          results: {
-            winCount: 3,
-            lossCount: 6
-          }
-        },
-        {
           name: 'Aaron & Duy',
           results: {
             winCount: 6,
             lossCount: 3
+          }
+        },
+        {
+          name: 'Ghazi & Reese',
+          results: {
+            winCount: 3,
+            lossCount: 6
           }
         }
       ]

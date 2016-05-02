@@ -1,0 +1,62 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-weight: lighter;
+    border-bottom: 1pt solid rgba(0.8, 0.8, 0.8, 0.1);
+}
+
+tr {
+}
+
+td {
+  vertical-align: baseline;
+}
+
+td p {
+  margin: 0;
+}
+
+.header {
+  padding: 8px 0px;
+}
+
+.name-score-header {
+
+}
+
+.score-header {
+  text-align: right;
+}
+
+.main-score-header {
+
+}
+
+.other-score-header {
+
+}
+
+.data {
+  font-size: 1.2em;
+  padding: 8px 0px 8px 0px;
+}
+
+.data-name {
+
+}
+
+.data-score {
+  text-align: right;
+}
+
+.data-main-score {
+  font-size: 2.0em;
+}
+
+.data-other-score {
+  font-weight: lighter;
+}

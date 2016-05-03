@@ -50,7 +50,7 @@ StandingsListComponent.defaultProps = {
           name: 'Reese',
           results: {
             winCount: 5,
-            lossCount: 3,
+            lossCount: 4,
             tieCount: 2
           }
         },
@@ -58,14 +58,14 @@ StandingsListComponent.defaultProps = {
           name: 'Duy',
           results: {
             winCount: 2,
-            lossCount: 7,
+            lossCount: 8,
             tieCount: 1
           }
         },
         {
           name: 'Aaron',
           results: {
-            winCount: 1,
+            winCount: 2,
             lossCount: 8,
             tieCount: 1
           }

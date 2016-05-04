@@ -3,6 +3,7 @@ import React from 'react';
 import StandingsRow from '../StandingsRow/StandingsRow.js';
 
 require('./StandingsCard.scss');
+var Button = require('react-button')
 
 class StandingsCard extends React.Component {
   render() {
@@ -14,15 +15,26 @@ class StandingsCard extends React.Component {
       tiesColumn = <th className="header score-header other-score-header">Ties</th>;
     }
 
+    function clicked(event){
+      event.stopPropagation();
+    }
+
+    var showEditButton = this.props.standing.editable;
+    var editButtonStyle = { height: '100%', minWidth: '64px' }
+    var editButton = showEditButton ? <Button onClick={clicked} style={editButtonStyle} >Edit</Button> : null;
+
     var teams = this.props.standing.teams.map(function(dictionary) {
       return (
-        <StandingsRow includeTies={includeTies} team={dictionary} />
+        <StandingsRow key={dictionary.id} includeTies={includeTies} team={dictionary} />
       )
     });
 
     return (
       <div className="masonry-item">
-        <h1>{leagueName}</h1>
+        <div className="card-header">
+          <h1>{leagueName}</h1>
+          {editButton}
+        </div>
         <table>
           <thead>
             <tr className="header-row">

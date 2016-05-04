@@ -7,6 +7,7 @@ class StandingsRow extends React.Component {
 
     var includeTies = this.props.includeTies;
     var teamName = this.props.team.name;
+
     var results = this.props.team.results;
     var winCount = results.winCount;
     var lossCount = results.lossCount;

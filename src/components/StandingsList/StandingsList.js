@@ -6,7 +6,7 @@ class StandingsListComponent extends React.Component {
   render() {
     var cardNodes = this.props.standings.map(function(dictionary) {
       return (
-        <StandingsCard standing={dictionary} />
+        <StandingsCard key={dictionary.id} standing={dictionary} />
       )
     });
 
@@ -22,10 +22,12 @@ StandingsListComponent.defaultProps = {
   standings: [
     {
       id: 1,
+      editable: true,
       leagueName: 'Doubles – 2016',
       includeTies: false,
       teams: [
         {
+          id: 4,
           name: 'Aaron & Duy',
           results: {
             winCount: 6,
@@ -33,6 +35,7 @@ StandingsListComponent.defaultProps = {
           }
         },
         {
+          id: 5,
           name: 'Ghazi & Reese',
           results: {
             winCount: 3,
@@ -43,10 +46,12 @@ StandingsListComponent.defaultProps = {
     },
     {
       id: 2,
+      editable: false,
       leagueName: 'Triples – 2016',
       includeTies: true,
       teams: [
         {
+          id: 1,
           name: 'Reese',
           results: {
             winCount: 5,
@@ -55,6 +60,7 @@ StandingsListComponent.defaultProps = {
           }
         },
         {
+          id: 2,
           name: 'Duy',
           results: {
             winCount: 2,
@@ -63,6 +69,7 @@ StandingsListComponent.defaultProps = {
           }
         },
         {
+          id: 3,
           name: 'Aaron',
           results: {
             winCount: 2,

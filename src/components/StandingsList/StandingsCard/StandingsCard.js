@@ -6,6 +6,14 @@ require('./StandingsCard.scss');
 var Button = require('react-button')
 
 class StandingsCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleEditButtonClicked = this.handleEditButtonClicked.bind(this);
+  }
+  handleEditButtonClicked(event) {
+    event.stopPropagation;
+    this.props.onEditButtonClicked(this.props.standing)
+  }
   render() {
 
     var leagueName = this.props.standing.leagueName;
@@ -15,13 +23,9 @@ class StandingsCard extends React.Component {
       tiesColumn = <th className="header score-header other-score-header">Ties</th>;
     }
 
-    function clicked(event){
-      event.stopPropagation();
-    }
-
     var showEditButton = this.props.standing.editable;
     var editButtonStyle = { height: '100%', minWidth: '64px' }
-    var editButton = showEditButton ? <Button onClick={clicked} style={editButtonStyle} >Edit</Button> : null;
+    var editButton = showEditButton ? <Button onClick={this.handleEditButtonClicked} style={editButtonStyle} >Edit</Button> : null;
 
     var teams = this.props.standing.teams.map(function(dictionary) {
       return (

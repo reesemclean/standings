@@ -1,0 +1,44 @@
+$column-gap: 20px;
+$row-gap: 20px;
+
+$card-padding: 20px;
+$card-border-radius: 2px;
+
+.masonry {
+    margin: $row-gap 0;
+    padding: 0;
+    -moz-column-gap: $column-gap;
+    -webkit-column-gap: $column-gap;
+    column-gap: $column-gap;
+}
+
+.masonry-item {
+    display: inline-block;
+    background: #fff;
+    padding: $card-padding;
+    margin: 0 0 $row-gap;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+    border-radius: $card-border-radius;
+    -moz-border-radius: $card-border-radius;
+    -webkit-border-radius: $card-border-radius;
+}
+
+@media only screen and (min-width: 768px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}

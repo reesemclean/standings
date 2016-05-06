@@ -1,19 +1,59 @@
+require('./StandingsList.scss');
+
 import React from 'react';
 
-import StandingsCard from '../StandingsCard/StandingsCard.js';
+import StandingsCard from './StandingsCard/StandingsCard.js';
+var Modal = require('react-modal');
+
+const customModalStyles = {
+  overlay : {
+    backgroundColor   : 'rgba(0, 0, 0, .0.5)'
+  },
+  content : {
+    maxWidth          : '640px',
+    margin            : '30px auto',
+    boxShadow         : '0px 2px 4px 2px rgba(0, 0, 0, 0.2)',
+    borderRadius      : '6px',
+    border            : 'none'
+  }
+};
 
 class StandingsListComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {modalIsOpen: false};
+    this.handleEditButtonClicked = this.handleEditButtonClicked.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+  handleEditButtonClicked(standing) {
+    this.setState({modalIsOpen: true});
+  }
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
   render() {
+    var list = this
     var cardNodes = this.props.standings.map(function(dictionary) {
       return (
-        <StandingsCard key={dictionary.id} standing={dictionary} />
+        <StandingsCard key={dictionary.id} standing={dictionary} onEditButtonClicked={list.handleEditButtonClicked} />
       )
     });
 
     return (
-      <section className="masonry">
-        {cardNodes}
-      </section>
+      <div>
+        <section className="masonry">
+          {cardNodes}
+        </section>
+        <Modal
+          isOpen={list.state.modalIsOpen}
+          onRequestClose={list.closeModal}
+          style={customModalStyles}
+          closeTimeoutMS={150} >
+          <h2 ref="subtitle">Hello</h2>
+          <button onClick={this.closeModal}>close</button>
+          <div>I am a modal</div>
+        </Modal>
+      </div>
     );
   }
 }

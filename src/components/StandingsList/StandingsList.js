@@ -69,7 +69,7 @@ StandingsListComponent.defaultProps = {
         {
           id: 4,
           name: 'Aaron & Duy',
-          record: {
+          results: {
             winCount: 6,
             lossCount: 3
           }

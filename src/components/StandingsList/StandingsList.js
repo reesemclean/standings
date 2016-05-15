@@ -69,7 +69,7 @@ StandingsListComponent.defaultProps = {
         {
           id: 4,
           name: 'Aaron & Duy',
-          results: {
+          record: {
             winCount: 6,
             lossCount: 3
           }
@@ -77,7 +77,7 @@ StandingsListComponent.defaultProps = {
         {
           id: 5,
           name: 'Ghazi & Reese',
-          results: {
+          record: {
             winCount: 3,
             lossCount: 6
           }
@@ -95,7 +95,7 @@ StandingsListComponent.defaultProps = {
           name: 'Reese',
           results: {
             winCount: 5,
-            lossCount: 4,
+            lossCount: 5,
             tieCount: 2
           }
         },
@@ -103,7 +103,7 @@ StandingsListComponent.defaultProps = {
           id: 2,
           name: 'Duy',
           results: {
-            winCount: 2,
+            winCount: 3,
             lossCount: 8,
             tieCount: 1
           }
@@ -113,7 +113,7 @@ StandingsListComponent.defaultProps = {
           name: 'Aaron',
           results: {
             winCount: 2,
-            lossCount: 8,
+            lossCount: 9,
             tieCount: 1
           }
         }

@@ -5,13 +5,13 @@ import React from 'react';
 class StandingsRow extends React.Component {
   render() {
 
-    var includeTies = this.props.includeTies;
+    var includeTies = this.props.permits_ties;
     var teamName = this.props.team.name;
 
-    var results = this.props.team.results;
-    var winCount = results.winCount;
-    var lossCount = results.lossCount;
-    var tieCount = results.tieCount;
+    var results = this.props.team.results_summary;
+    var winCount = results.win_count;
+    var lossCount = results.loss_count;
+    var tieCount = results.tie_count;
 
     var tieNode;
     if (includeTies) {

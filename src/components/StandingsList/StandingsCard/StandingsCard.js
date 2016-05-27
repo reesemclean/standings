@@ -16,20 +16,20 @@ class StandingsCard extends React.Component {
   }
   render() {
 
-    var leagueName = this.props.standing.leagueName;
-    var includeTies = this.props.standing.includeTies;
+    var leagueName = this.props.league.name;
+    var includeTies = this.props.league.permits_ties;
     var tiesColumn;
     if (includeTies == true) {
       tiesColumn = <th className="header score-header other-score-header">Ties</th>;
     }
 
-    var showEditButton = this.props.standing.editable;
+    var showEditButton = false//this.props.standing.editable;
     var editButtonStyle = { height: '100%', minWidth: '64px' }
     var editButton = showEditButton ? <Button onClick={this.handleEditButtonClicked} style={editButtonStyle} >Edit</Button> : null;
 
-    var teams = this.props.standing.teams.map(function(dictionary) {
+    var teams = this.props.league.teams.map(function(dictionary) {
       return (
-        <StandingsRow key={dictionary.id} includeTies={includeTies} team={dictionary} />
+        <StandingsRow key={dictionary.id} permits_ties={includeTies} team={dictionary} />
       )
     });
 

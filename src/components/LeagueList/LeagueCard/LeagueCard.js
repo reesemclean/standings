@@ -2,10 +2,10 @@ import React from 'react';
 
 import StandingsRow from '../StandingsRow/StandingsRow.js';
 
-require('./StandingsCard.scss');
+require('./LeagueCard.scss');
 var Button = require('react-button')
 
-class StandingsCard extends React.Component {
+class LeagueCard extends React.Component {
   constructor(props) {
     super(props);
     this.handleEditButtonClicked = this.handleEditButtonClicked.bind(this);
@@ -57,7 +57,7 @@ class StandingsCard extends React.Component {
   }
 }
 
-StandingsCard.defaultProps = {
+LeagueCard.defaultProps = {
 };
 
-export default StandingsCard;
+export default LeagueCard;

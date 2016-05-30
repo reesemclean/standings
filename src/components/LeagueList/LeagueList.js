@@ -1,8 +1,8 @@
-require('./StandingsList.scss');
+require('./LeagueList.scss');
 
 import React from 'react';
 
-import StandingsCard from './StandingsCard/StandingsCard.js';
+import LeagueCard from './LeagueCard/LeagueCard.js';
 var Modal = require('react-modal');
 
 const customModalStyles = {
@@ -18,7 +18,7 @@ const customModalStyles = {
   }
 };
 
-class StandingsListComponent extends React.Component {
+class LeagueList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {modalIsOpen: false, leagues: []};
@@ -41,7 +41,7 @@ class StandingsListComponent extends React.Component {
     var list = this
     var cardNodes = this.state.leagues.map(function(dictionary) {
       return (
-        <StandingsCard key={dictionary.id} league={dictionary} onEditButtonClicked={list.handleEditButtonClicked} />
+        <LeagueCard key={dictionary.id} league={dictionary} onEditButtonClicked={list.handleEditButtonClicked} />
       )
     });
 
@@ -64,7 +64,7 @@ class StandingsListComponent extends React.Component {
   }
 }
 
-StandingsListComponent.defaultProps = {
+LeagueList.defaultProps = {
   'url': 'https://intense-lowlands-93826.herokuapp.com/leagues'
 }
 
@@ -132,4 +132,4 @@ StandingsListComponent.defaultProps = {
 //   ]
 // };
 
-export default StandingsListComponent;
+export default LeagueList;

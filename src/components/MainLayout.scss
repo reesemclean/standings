@@ -1,0 +1,12 @@
+$wrapper-vertical-margin: 20px;
+
+.app {
+    width: 95%;
+    margin: $wrapper-vertical-margin auto;
+}
+
+@media only screen and (min-width: 1280px) {
+    .app {
+        width: 1260px;
+    }
+}

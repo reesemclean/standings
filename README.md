@@ -1,12 +1,8 @@
 # Start for development
-npm start # or
+npm start
+
+# Start the server in production mode
 npm run serve
-
-# Start the dev-server with the dist version
-npm run serve:dist
-
-# Just build the dist version and copy static files
-npm run dist
 
 # Run unit tests
 npm test

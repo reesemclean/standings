@@ -12,6 +12,7 @@ let additionalPaths = [];
 module.exports = {
   additionalPaths: additionalPaths,
   port: defaultSettings.port,
+  webpackPort: defaultSettings.webpackPort,
   debug: true,
   devtool: 'eval',
   output: {

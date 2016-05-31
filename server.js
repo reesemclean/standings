@@ -1,6 +1,8 @@
 /*eslint no-console:0 */
 'use strict';
 
+require('dotenv').config();
+
 var isProduction = process.env.NODE_ENV === 'production';
 
 var express = require('express');

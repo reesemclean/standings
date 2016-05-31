@@ -1,0 +1,15 @@
+.navigation-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  h1 {
+    margin: 16px 16px;
+    display: inline-block;
+  }
+
+  a {
+    margin-left: 16px;
+  }
+}
